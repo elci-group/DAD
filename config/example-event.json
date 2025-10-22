@@ -1,0 +1,14 @@
+{
+  "hash": "a3f8bc9d2e1f0c4b8a9d7e6f5c4b3a2d1e0f9c8b",
+  "timestamp": "2025-10-22T10:30:00Z",
+  "command": "python script.py",
+  "working_dir": "/home/user/project",
+  "exit_code": 1,
+  "stderr": "ModuleNotFoundError: No module named 'numpy'\nTraceback (most recent call last):\n  File \"script.py\", line 3, in <module>\n    import numpy as np",
+  "stdout": null,
+  "env_signature": "Linux-python3.11",
+  "context_diff": "+ pip install numpy",
+  "embedding": null,
+  "fix_applied": false,
+  "notes": "Common missing dependency error"
+}

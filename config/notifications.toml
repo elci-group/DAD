@@ -1,0 +1,56 @@
+# DAD Notification Configuration
+
+[notifications]
+# Enable desktop notifications
+enabled = true
+
+# Use notify-send (dunst compatible)
+backend = "notify-send"
+
+# Show notification on every training episode
+notify_on_training = true
+
+# Show notification when similar errors are detected
+notify_on_similarity = true
+
+# Minimum similarity count to trigger notification
+similarity_threshold = 3
+
+# Show notification for predictions (when implemented)
+notify_on_prediction = false
+
+# Prediction probability threshold (0.0-1.0) to trigger notification
+prediction_threshold = 0.7
+
+[appearance]
+# Notification timeout in milliseconds
+timeout_training = 5000
+timeout_similarity = 4000
+timeout_prediction = 8000
+
+# Icons (leave empty for default)
+icon_training = "dialog-information"
+icon_similarity = "dialog-information"
+icon_prediction = "dialog-warning"
+
+[filtering]
+# Don't notify for these commands (regex patterns)
+exclude_commands = [
+    "^ls ",
+    "^cd ",
+    "^pwd$",
+]
+
+# Minimum stderr length to trigger notification
+min_stderr_length = 20
+
+# Quiet hours (optional, 24-hour format)
+# quiet_start = "22:00"
+# quiet_end = "08:00"
+
+[dunst]
+# Category for dunst filtering
+category = "dad.training"
+
+# Application name in notifications
+app_name = "DAD"

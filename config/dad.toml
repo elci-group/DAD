@@ -1,0 +1,56 @@
+# DAD Configuration File
+
+[daemon]
+# Unix socket path for event communication
+socket_path = "/tmp/dad-events.sock"
+
+# Database location
+db_path = "~/.local/share/dad/dad.db"
+
+# Log level: trace, debug, info, warn, error
+log_level = "info"
+
+[ml]
+# Python ML sidecar settings
+embedding_model = "all-MiniLM-L6-v2"
+model_path = "~/.local/share/dad/model.pkl"
+
+# Enable automatic micro-training on error capture
+auto_train = true
+
+# Minimum confidence threshold for predictions (0.0-1.0)
+prediction_threshold = 0.7
+
+[storage]
+# Maximum number of events to keep in database
+max_events = 10000
+
+# Enable embedding caching
+cache_embeddings = true
+
+# DuckDB cache path
+duckdb_cache = "~/.local/share/dad/cache.duckdb"
+
+[capture]
+# Capture only errors (exit code != 0)
+errors_only = true
+
+# Minimum stderr length to capture
+min_stderr_length = 10
+
+# Exclude patterns (regex)
+exclude_commands = [
+    "^ls$",
+    "^cd ",
+    "^pwd$",
+]
+
+[features]
+# Enable diff-based context capture
+enable_diff = true
+
+# Enable git integration
+enable_git = true
+
+# Enable predictive warnings
+enable_predictions = false

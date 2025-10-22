@@ -1,0 +1,58 @@
+# DAD-specific dunst configuration
+# Include this in your main dunstrc or place in ~/.config/dunst/dunstrc.d/
+
+# DAD Training Episode notifications
+[dad_training]
+    appname = "DAD"
+    category = "dad.training"
+    urgency = low
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#89b4fa"
+    timeout = 5
+    icon = /usr/share/icons/Papirus/48x48/apps/brain.png
+    
+[dad_training_normal]
+    appname = "DAD"
+    category = "dad.training"
+    urgency = normal
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#f9e2af"
+    timeout = 5
+
+[dad_training_critical]
+    appname = "DAD"
+    category = "dad.training"
+    urgency = critical
+    background = "#1e1e2e"
+    foreground = "#f38ba8"
+    frame_color = "#f38ba8"
+    timeout = 8
+
+# DAD Pattern Detection notifications
+[dad_pattern]
+    appname = "DAD"
+    summary = "*Pattern Detected*"
+    urgency = normal
+    background = "#1e1e2e"
+    foreground = "#a6e3a1"
+    frame_color = "#a6e3a1"
+    timeout = 4
+
+# DAD Prediction Warnings
+[dad_prediction]
+    appname = "DAD"
+    summary = "*Prediction Warning*"
+    urgency = critical
+    background = "#1e1e2e"
+    foreground = "#fab387"
+    frame_color = "#fab387"
+    timeout = 8
+    history_ignore = no
+
+# Silence DAD notifications during specific times (optional)
+# [dad_quiet_hours]
+#     appname = "DAD"
+#     skip_display = yes
+#     script = ~/.config/dunst/scripts/dad-quiet-check.sh
